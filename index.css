@@ -1,0 +1,599 @@
+/* Reset and body styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+
+/* Landing Page Section */
+
+header.landing-page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.landing-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('images/BGLanding.png') no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+}
+
+.landing-content {
+    z-index: 1;
+}
+
+.landing-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: backInDown;
+    animation-duration: 2s;
+}
+
+.landing-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: backInUp;
+    animation-duration: 2.5s;
+}
+
+
+/* Sticky Navigation */
+
+#navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    /* Add padding to top and bottom */
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    /* Change position to sticky */
+    top: 0;
+    /* Stick to the top */
+    z-index: 1000;
+    /* Ensure it appears above other content */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Add shadow for depth */
+}
+
+
+/* Navbar Links */
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    /* Add padding to links */
+    margin: 0 10px;
+    /* Add margin between links */
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    /* Add smooth transition */
+}
+
+#navbar a:hover {
+    background-color: #555;
+    /* Darken background on hover */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+
+/* Responsive Navbar */
+
+@media screen and (max-width: 768px) {
+    #navbar {
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+    #navbar a {
+        display: block;
+        margin: 10px 0;
+        /* Adjust margin for better spacing */
+    }
+}
+
+
+/* Sections */
+
+.about,
+.skills,
+.testimonial,
+.interests {
+    padding: 4rem 5rem;
+    text-align: center;
+    color: white;
+    height: 100vh;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.skills ul,
+.experience ul {
+    list-style-type: none;
+}
+
+.skills li,
+.experience li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+
+/* About me section */
+
+.about {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    z-index: -1;
+    background: url('images/BGAbout.png') no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+
+/* Skills section */
+
+.skills {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    background: url('images/BGSkills.jpg') no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+.accordion {
+    background-color: rgba(238, 238, 238, 0.7);
+    /* Semi-transparent background */
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion {
+    background-color: rgba(204, 204, 204, 0.1);
+    color: white;
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.active,
+.accordion:hover {
+    background-color: rgba(204, 204, 204, 0.2);
+    /* Semi-transparent background on hover */
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+
+.panel {
+    padding: 2rem 4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background */
+    display: none;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.panel.show {
+    display: block;
+}
+
+
+/* Style for the icon */
+
+.accordion .icon {
+    font-size: 1.2em;
+    transition: transform 0.4s;
+}
+
+.accordion.active .icon {
+    transform: rotate(45deg);
+    /* Rotate to indicate expanded state */
+}
+
+
+/* Testimonial section */
+
+.testimonial {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    z-index: -1;
+    background: url('images/BGPortfolio.jpg') no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+
+/* Interests section */
+
+.interests {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    z-index: -1;
+    background: black;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.expandable {
+    color: white;
+    height: 100vh;
+}
+
+.expandable h2 {
+    font-size: 2rem;
+}
+
+.expandable p {
+    font-size: 1rem;
+}
+
+:root {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    --color-primary: #3E66A0;
+    --cover-placeholder: var(--color-primary);
+}
+
+.c-accordion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.c-accordion__item {
+    --cover: var(--cover-placeholder);
+    background: var(--cover);
+    background-position: center center;
+    background-size: cover;
+    background-color: var(--cover-placeholder);
+    background-blend-mode: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #111111 100%);
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+    width: 100px;
+    min-width: 2.05rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.c-accordion__item:hover,
+.c-accordion__item:focus-within,
+.c-accordion__item:target {
+    _flex-grow: 2;
+    width: 50%;
+    background-color: transparent;
+}
+
+.c-accordion__item:hover .c-accordion__title--hover-hide,
+.c-accordion__item:focus-within .c-accordion__title--hover-hide,
+.c-accordion__item:target .c-accordion__title--hover-hide {
+    max-height: 0;
+    opacity: 0;
+}
+
+.c-accordion__item:hover .c-accordion__title--hover-show,
+.c-accordion__item:focus-within .c-accordion__title--hover-show,
+.c-accordion__item:target .c-accordion__title--hover-show {
+    opacity: 1;
+}
+
+.c-accordion__item:hover .c-accordion__description,
+.c-accordion__item:focus-within .c-accordion__description,
+.c-accordion__item:target .c-accordion__description {
+    opacity: 1;
+}
+
+.c-accordion__item:hover {
+    cursor: pointer;
+}
+
+.c-accordion__action {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.75);
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #111111 100%);
+    text-decoration: none;
+}
+
+.c-accordion__title {
+    color: white;
+    font-family: "Roboto Condensed";
+    margin: 0;
+    max-height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.c-accordion__title--hover-show {
+    opacity: 0;
+    width: 100%;
+}
+
+.c-accordion__title--hero {
+    font-size: 4rem;
+    line-height: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: -145px;
+}
+
+.c-accordion__aside {
+    padding: 1rem;
+    position: absolute;
+    height: 100%;
+    right: 1rem;
+    bottom: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.c-accordion__aside:before {
+    content: "+";
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.c-accordion__aside:after {
+    content: "";
+    flex-grow: 1;
+    width: 1px;
+    display: block;
+    margin-top: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.c-accordion__content {
+    padding: 24rem 4.5rem 0rem 8rem;
+    width: 55%;
+    text-align: left;
+    line-height: 4px;
+    font-size: 16px;
+    left: -50rem;
+}
+
+.c-accordion__description {
+    color: white;
+    font-weight: 500;
+    line-height: 120%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    margin-left: -145px;
+    width: 85%;
+    padding-top: 8px;
+}
+
+
+/* Contents Modal */
+
+
+/* Expandable Modal */
+
+.modal-expandable {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-expandable-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: black;
+}
+
+.close-expandable {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-expandable:hover,
+.close-expandable:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Projects section */
+
+section .projects {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-content: center;
+}
+
+
+/* Project Gallery */
+
+.gallery-track {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    padding: 0.25rem;
+    will-change: transform;
+}
+
+.card {
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    & .card-image-wrapper {
+        height: 110%;
+        will-change: transform;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (width < 800px) {
+    .gallery-track {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 550px) {
+    .gallery-track {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* Modal styles */
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    margin: auto;
+    padding-top: 5%;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

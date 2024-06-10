@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My UI/UX Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- Landing Page -->
+    <header id="landing-page" class="landing-page">
+        <div class="landing-background">
+        </div>
+        <div class="section-content-wrapper">
+            <div class="landing-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Yiming Li - UI/UX Designer</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <div id="navbar">
+        <a href="#landing-page">Home</a>
+        <a href="#about">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
+        <a href="#testimonial">Testimonial</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#certificates">Certificates</a>
+    </div>
+
+    <!-- About me section -->
+    <section id="about" class="about">
+        <div class="section-content-wrapper">
+
+            <h2>About Me</h2>
+            <p>Hello! I'm Yiming.</p>
+            <p>I am a passionate web developer with a knack for crafting visually captivating and user-friendly websites. Armed with a diploma in Information Technology from Singapore Polytechnic and currently pursuing a degree in Computer Science at SIM
+                UOL, I'm dedicated to staying ahead of industry trends to create digital products that truly stand out.</p>
+
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="skills">
+        <div class="section-content-wrapper">
+            <h2>Skills</h2>
+        </div>
+
+        <!-- Accordion group -->
+        <button class="accordion">UI Design <span class="icon">+</span></button>
+        <div class="panel">
+            <p>The UI is often the first interaction a user has with a product. A well-designed UI can create a positive first impression and encourage users to engage further.</p>
+            <br>
+            <p>Coming from a background of art, photography, UX design, and programming, I am equipped with both aesthetics and technical skills to deliver visually pleasing and user-friendly UI products to stand out from the competition.</p>
+            <br>
+            <p>Tools:</p>
+            <p>Figma, Adobe XD, Photoshop, Canva, Spline</p>
+        </div>
+
+        <button class="accordion">UX Design <span class="icon">+</span></button>
+        <div class="panel">
+            <p>Every good product needs to be designed with the user in mind.</p>
+            <br>
+            <p>A good UX Design should not only be functional, but also enjoyable and efficient to use. It impacts user satisfaction, loyalty, and overall success of the product, making it a vital aspect of product development and business strategy.</p>
+            <br>
+            <p>Coming from a background in Diploma in Information with specialization in UIUX Design, I am equipped with skills to perform the UX Design cycle.</p>
+            <br>
+            <p>Design Cycle: Research, Design, Prototype, Test, Build, Evaluate</p>
+        </div>
+
+        <button class="accordion">Front-end Web Development <span class="icon">+</span></button>
+        <div class="panel">
+            <p>Coming from my Diploma in Information Technology, I am equipped with capabilities of developing both static and dynamic websites.</p>
+            <br>
+            <p>Languages & Frameworks: HTML, CSS , JavaScript, Bootstrap, WordPress</p>
+        </div>
+
+        <button class="accordion">Backend-end Web Development <span class="icon">+</span></button>
+        <div class="panel">
+            <p>Coming from my Diploma in Information Technology, I am equipped with capabilities of developing both static and dynamic websites.</p>
+            <br>
+            <p>Languages & Frameworks: JavaScript, Node.js, MySQL, Python</p>
+        </div>
+
+        <button class="accordion">Others <span class="icon">+</span></button>
+        <div class="panel">
+            <p>Lorem ipsum...</p>
+        </div>
+    </section>
+
+
+
+    <!-- Areas of interest section -->
+    <section id="interests" class="interests">
+        <div class="section-content-wrapper">
+            <h2>My areas of interests</h2>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section id="expandable" class="expandable">
+        <ul class="c-accordion">
+            <li id="cf" class="c-accordion__item" style="--cover: url('images/Photographer.jpg')">
+                <a href="javascript:void(0)" class="c-accordion__action" onclick="openModal('modal-photography')">
+                    <div class="c-accordion__content">
+                        <h2 class="c-accordion__title c-accordion__title--hero c-accordion__title--hover-show">PHOTOGRAPHY</h2>
+                        <p class="c-accordion__description">Click here to check out my photography journey</p>
+                    </div>
+                    <div class="c-accordion__aside">
+                        <h2 class="c-accordion__title c-accordion__title--hover-hide">PHOTOGRAPHY</h2>
+                    </div>
+                </a>
+            </li>
+            <li id="corp" class="c-accordion__item" style="--cover: url('images/UIUX.jpg')">
+                <a href="javascript:void(0)" class="c-accordion__action" onclick="openModal('modal-uiux')">
+                    <div class="c-accordion__content">
+                        <h2 class="c-accordion__title c-accordion__title--hero c-accordion__title--hover-show">UIUX DESIGN</h2>
+                        <p class="c-accordion__description">Click here to check out my UIUX Projects</p>
+                    </div>
+                    <div class="c-accordion__aside">
+                        <h2 class="c-accordion__title c-accordion__title--hover-hide">UIUX DESIGN</h2>
+                    </div>
+                </a>
+            </li>
+            <li id="lead" class="c-accordion__item" style="--cover: url('images/WebDev.jpg')">
+                <a href="javascript:void(0)" class="c-accordion__action" onclick="openModal('modal-webdev')">
+                    <div class="c-accordion__content">
+                        <h2 class="c-accordion__title c-accordion__title--hero c-accordion__title--hover-show">WEB DEVELOPMENT</h2>
+                        <p class="c-accordion__description">Click here to check out my web development capabilities</p>
+                    </div>
+                    <div class="c-accordion__aside">
+                        <h2 class="c-accordion__title c-accordion__title--hover-hide">WEB DEVELOPMENT</h2>
+                    </div>
+                </a>
+            </li>
+            <li id="warehouse" class="c-accordion__item" style="--cover: url('images/Stocks.jpg')">
+                <a href="javascript:void(0)" class="c-accordion__action" onclick="openModal('modal-investment')">
+                    <div class="c-accordion__content">
+                        <h2 class="c-accordion__title c-accordion__title--hero c-accordion__title--hover-show">INVESTMENT</h2>
+                        <p class="c-accordion__description">Click here to explore my investment returns</p>
+                    </div>
+                    <div class="c-accordion__aside">
+                        <h2 class="c-accordion__title c-accordion__title--hover-hide">INVESTMENT</h2>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Content Modals -->
+    <div id="modal-photography" class="modal-expandable">
+        <div class="modal-expandable-content">
+            <span class="close-expandable" onclick="closeModal('modal-photography')">&times;</span>
+            <h2>Photography</h2>
+            <p>Gain a deeper understanding of how users feel about every aspect of your product...</p>
+        </div>
+    </div>
+
+    <div id="modal-uiux" class="modal-expandable">
+        <div class="modal-expandable-content">
+            <span class="close-expandable" onclick="closeModal('modal-uiux')">&times;</span>
+            <h2>UIUX Design</h2>
+            <p>Trigger in-app surveys based on specific user actions or behaviors...</p>
+        </div>
+    </div>
+
+    <div id="modal-webdev" class="modal-expandable">
+        <div class="modal-expandable-content">
+            <span class="close-expandable" onclick="closeModal('modal-webdev')">&times;</span>
+            <h2>Web Development</h2>
+            <p>Instantly translate your survey with a click of a button...</p>
+        </div>
+    </div>
+
+    <div id="modal-investment" class="modal-expandable">
+        <div class="modal-expandable-content">
+            <span class="close-expandable" onclick="closeModal('modal-investment')">&times;</span>
+            <h2>Investment</h2>
+            <p>Explore my investment returns...</p>
+        </div>
+    </div>
+
+    <!-- Testimonial section -->
+    <section id="testimonial" class="testimonial">
+        <div class="section-content-wrapper">
+            <h2>Testimonial</h2>
+            <p>" During the internship, Yiming was attached to the User Experience Design (UXD) Team in the Information Services Group (ISG). Yiming displayed his competency in UXD skills through creating interactive wireframes and prototypes in Figma for
+                Season Parking e- service, e-Service Finder, HDB Flat Eligibility (HFE) Letter and Access Application Management System (AAMS) Portal.</p>
+            <br>
+            <p>
+                Yiming was involved in the usability testing, heuristic evaluation, and design critique to validate the respective prototypes. He was also tasked to design web page templates in the HDB Design System. Yiming clearly demonstrated aptitude to learn new
+                UXD skills and understanding of HDB’s business processes. He was diligent in his work and completed his projects with good quality. "
+            </p>
+            <br>
+            <p> - ONG KAI LUN ALAN
+
+            </p>
+            <p>(DEPUTY DIRECTOR CUSTOMER EXPERIENCE AND EMPLOYEE SYSTEMS <br> INFORMATION SERVICES GROUP HOUSING & DEVELOPMENT BOARD) </p>
+        </div>
+    </section>
+
+
+    <section id="projects" class="projects">
+        <main class='gallery'>
+            <div class='gallery-track'></div>
+        </main>
+
+        <div id="gallery-modal" class="gallery-modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+    </section>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
