@@ -119,6 +119,7 @@ header.landing-page {
 
 .about,
 .skills,
+.experience,
 .testimonial,
 .interests {
     padding: 4rem 5rem;
@@ -132,6 +133,10 @@ section h2 {
     margin-bottom: 2rem;
 }
 
+section h3 {
+    font-size: 1.5rem;
+}
+
 .skills ul,
 .experience ul {
     list-style-type: none;
@@ -143,9 +148,6 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-
-/* About me section */
-
 .about {
     position: relative;
     width: 100%;
@@ -153,12 +155,75 @@ section h2 {
     z-index: -1;
     background: url('images/BGAbout.png') no-repeat center center;
     background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
     overflow: hidden;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px;
+}
+
+.intro-text {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-icons img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.about-icons span {
+    vertical-align: middle;
+    font-size: 1rem;
+}
+
+.intro-image {
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.intro-image img {
+    border-radius: 20px;
+    max-width: 400px;
+    height: auto;
 }
 
 
 /* Skills section */
+
+@media screen and (max-width: 768px) {
+    #navbar {
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+    #navbar a {
+        display: block;
+        margin: 10px 0;
+        /* Adjust margin for better spacing */
+    }
+}
 
 .skills {
     position: relative;
@@ -168,6 +233,21 @@ section h2 {
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .skills {
+        position: relative;
+        width: 100%;
+        height: 120vh;
+        background: url('images/BGSkills.jpg') no-repeat center center;
+        background-size: cover;
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
 }
 
 
@@ -233,17 +313,46 @@ section h2 {
 }
 
 
+/* Experience section */
+
+.experience {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    z-index: -1;
+    background: url('images/BGExperience.jpg') no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: left;
+}
+
+.experience .contents {
+    padding-top: 5%;
+}
+
+
 /* Testimonial section */
 
 .testimonial {
     position: relative;
     width: 100%;
-    height: 95vh;
+    height: 120vh;
     z-index: -1;
     background: url('images/BGPortfolio.jpg') no-repeat center center;
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    text-align: left;
+}
+
+.testimonial .contents {
+    padding-top: 5%;
 }
 
 
