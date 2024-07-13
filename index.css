@@ -115,6 +115,36 @@ header.landing-page {
 }
 
 
+/* Progress Bar */
+
+.progress {
+    height: 3px !important;
+    width: 0%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+}
+
+@keyframes progress {
+    to {
+        background-color: rgb(20, 255, 226);
+        width: 100%;
+    }
+}
+
+:root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
 /* Sections */
 
 .about,
@@ -151,36 +181,24 @@ section h3 {
 .about {
     position: relative;
     width: 100%;
-    height: 120vh;
+    height: 105vh;
     z-index: -1;
     background: url('images/BGAbout.png') no-repeat center center;
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
     overflow: hidden;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    padding: 40px;
-}
-
-.intro-text {
-    flex: 1;
-    padding-right: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
     text-align: left;
 }
 
-.intro-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+.about .row {
+    padding-top: 4%;
+}
+
+.intro-text {
+    text-align: left;
 }
 
 .intro-text p {
@@ -236,6 +254,7 @@ section h3 {
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 5%;
+    text-align: left;
 }
 
 @media screen and (max-width: 768px) {

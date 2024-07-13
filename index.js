@@ -1,3 +1,8 @@
+/* Scroll */
+window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);
+
 /* Expandable Modal */
 function openModal(modalId) {
     document.getElementById(modalId).style.display = "block";
@@ -40,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+/* 
 
-/* Project Gallery */
 const imageUrls = [
     "https://github.com/YimingSpyro/photography/blob/master/pics/1.jpg?raw=true",
     "https://github.com/YimingSpyro/photography/blob/master/pics/2.jpg?raw=true",
@@ -145,4 +150,4 @@ window.addEventListener('click', (event) => {
     if (event.target === modal) {
         closeModal();
     }
-});
+}); */

@@ -1,0 +1,74 @@
+body {
+    background-color: #F9F3E5 !important;
+}
+
+header {
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    margin: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+nav li {
+    margin: 0 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #a96f45;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+main {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.intro h1 {
+    padding-top: 5%;
+    color: #A86446;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.intro p {
+    padding-top: 5%;
+    color: #A86446;
+    font-size: 1rem;
+}
+
+
+/* content Container */
+
+.works-container {
+    padding-top: 5%;
+}
+
+.works-card {
+    padding-top: 2%;
+    margin-bottom: 5%;
+}
+
+.works-container h2 {
+    color: #A86446;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card .btn {
+    color: #F9F3E5;
+    background-color: #A86446;
+}
+
+.card p {
+    color: #A86446;
+    font-size: 1rem;
+}
