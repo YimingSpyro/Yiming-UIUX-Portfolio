@@ -339,7 +339,7 @@ section h3 {
     width: 100%;
     height: 120vh;
     z-index: -1;
-    background: url('images/BGExperience.jpg') no-repeat center center;
+    background: url('images/BGExperience.JPG') no-repeat center center;
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     overflow: hidden;
